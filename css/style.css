@@ -1,0 +1,381 @@
+:root {
+				--color: #0d6efd;
+				--colorb: #e2edff;
+}
+				
+
+
+
+
+/* normal */
+.bc{
+background: var(--color);
+}
+
+.ct {
+color: var(--color);
+}
+
+.fl {
+fill: var(--color);
+}
+
+/* cerah */
+.bct {
+background: var(--colorb);
+}
+.flt {
+fill: var(--colorb);
+}
+
+
+
+.colors {
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				border: 2px solid #dbdbdb;
+				cursor: pointer;
+}
+
+#blue {
+				background: #0d6efd;
+}
+
+#red {
+				background: #DC143C;
+}
+
+#purple {
+				background: #5D3FD3;
+}
+#brown {
+				background: #8B4513;
+}
+
+#orange {
+				background: #FF8C00;
+}
+
+#green {
+				background: #32CD32;
+}
+.bg-scroll {
+				backgroud: transaparent !important;
+				border-bottom: 1px solid var(--color);
+				transition: 0.75s ease;
+}
+.txt-scroll {
+				color: var(--color);
+				transition: 0.75s ease;
+}
+
+.bg-scroll.scrolled {
+				background: var(--color);
+				border-bottom: transparent;
+}
+.txt-scroll.scrolled {
+				color: white;
+}
+
+.offcanvas-bottom {
+				height: 350px;
+}
+
+
+
+.tmbl {
+				border-radius: 10px 10px;
+				margin-top: 2px;
+				width: 60px;
+				height: 60px;
+				list-style: none;
+}
+
+.tmbl i {
+				font-size: 25px;
+				color: var(--color);
+}
+.tmbl p {
+				font-size: 10px;
+				color: var(--color);
+				font-weight: bold;
+}
+.active {
+				box-shadow: 0 0 2px;
+				background: var(--color);
+				transition: 0.5s;
+				width: 60px;
+				height: 60px;
+			 margin-top: -10px;
+}
+
+
+.active i {
+				font-size: 30px;
+				color: white;
+}
+.active p {
+				font-size: 12px;
+				color: white;
+				margin-bottom: -3px;
+				font-weight: normal;
+}
+
+
+.card {
+				height: 400px;
+				overflow: hidden;
+				transition: 1s;
+}
+.card:hover {
+				height: 100%;
+				
+}
+
+.load {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotate(45deg);
+				width: 100px;
+				height: 100px;
+				animation: animate 1s linear infinite;
+}
+
+.load span {
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				background: #f00;
+				animation: rotate 1s linear infinite;
+}
+.load span:nth-child(1) {
+				top: 0;
+				left: 0;
+				background: #DC143C;
+}
+.load span:nth-child(2) {
+				top: 0;
+				right: 0;
+				background: #5D3FD3;
+}
+.load span:nth-child(3) {
+				bottom: 0;
+				left: 0;
+				background: #8B4513;
+}
+.load span:nth-child(4) {
+				bottom: 0;
+				right: 0;
+				background: #FF8C00;
+}
+
+@keyframes animate
+{
+				0% 
+				{
+								width: 100px;
+								height: 100px;
+				}
+				10% 
+				{
+								width: 100px;
+								height: 100px;
+				}
+				50% 
+				{
+					   width: 150px;
+								height: 150px;
+				}
+				90% 
+				{
+								width: 100px;
+								height: 100px;
+				}
+				100% 
+				{
+								width: 100px;
+								height: 100px;
+				}
+}
+@keyframes rotate
+{
+				0% 
+				{
+								transform: rotate(0deg);
+				}
+				10% 
+				{
+								transform: rotate(0deg);
+				}
+				50% 
+				{
+					   transform: rotate(90deg);
+				}
+				90% 
+				{
+								transform: rotate(90deg);
+				}
+				100% 
+				{
+								transform: rotate(90deg);
+				}
+}
+
+.loadp {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: #0d6efd;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+				font-family: 'Ubuntu', sans-serif;
+				margin: 0;
+				padding: 0;
+}
+.container1 {
+				position: absolute;
+				overflow: hidden;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+				margin: 0 20px 20px 20px;
+}
+
+.container1 .crd {
+				position: relative;
+				width: 300px;
+				height: 400px;
+				margin: 20px 0 90px 10px;
+				overflow: hidden;
+				box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+				border-radius: 15px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+}
+
+.container1 .crd .cntnt {
+				position: absolute;
+				bottom: -160px;
+				width: 100%;
+				height: 160px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				z-index: 10;
+				flex-direction: column;
+				backdrop-filter: blur(15px);
+				box-shadow: 0 -10px 10px rgba(0,0,0,0.1);
+				border: 1px solid rgba(225,225,225,0.2);
+				transition: bottom 0.5s;
+				transition-delay: 0.8s;
+}
+.container1 .crd:hover .cntnt {
+				bottom: 0px;
+				transition-delay: 0s;
+}
+.container1 .crd .cntnt .cntntBx h3 {
+				color: #ffffff;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				font-weight: 500;
+				font-size: 18px;
+				text-align: center;
+				margin: 20px 0 15px;
+				line-weight: 1.1em;
+				transition: 0.5s;
+				opacity: 0;
+				transform: translateY(-20px);
+				trasition-delay: 0.6s;
+}
+.container1 .crd:hover .cntnt .cntntBx h3 {
+				opacity: 1;
+				transform: translate(0px);
+				transition-delay: 0.2s;
+}
+.container1 .crd .cntnt .cntntBx h3 span {
+				font-size: 12px;
+				font-weight: 300;
+				text-transform: initial;
+}
+.container1 .crd .cntnt .sci {
+				position: relative;
+				bottom: 0px;
+				margin-right: 35px;
+}
+.container1 .crd .cntnt .sci li {
+				list-style: none;
+				margin: 0 5px;
+				transform: translateY(40px);
+				transition: 0.5s;
+				opacity: 0;
+				transition-delay: calc(0.1s * var(--i));
+				text-align: center;
+				box-shadow: 0 0 3px rgba(0,0,0,0.1);
+				border: 1px solid white;
+				width: 40px;
+				height: 40px;
+				padding-top: 5px;
+				border-radius: 50%;
+}
+.container1 .crd:hover .cntnt .sci li {
+				opacity: 1;
+				transform: translateY(0px);
+}
+.container1 .crd .cntnt .sci li a {
+				color: #ffffff;
+				font-size: 20px;
+}
+.container1 .crd .cntnt .sci li:hover {
+				background: white;
+				border: 1px solid black;
+}
+.container1 .crd .cntnt .sci li:hover a {
+				color: black;
+}
+.invisible {
+				position: fixed;
+				animation: fadeout 0.5s linear;
+}
+
+@keyframes fadeout
+{
+				0% 
+				{
+								opacity: 1;
+				}
+				100% 
+				{
+								opacity: 0;
+				}
+}
+
+
+.visible {
+				animation: fadein 0.5s linear;
+}
+
+@keyframes fadein
+{
+				0% 
+				{
+								opacity: 0;
+				}
+				100% 
+				{
+								opacity: 1;
+				}
+}
+
+@media (max-width: 768px) {
+
+.offcanvas-bottom {
+				height: 250px;
+}
+}
