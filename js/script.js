@@ -89,8 +89,11 @@ $(".loadp").fadeOut("slow");
 				});
 
 window.onhashchange = function() { 
+	window.history.back();	
 				
 };
+		
+
 
 				
 
