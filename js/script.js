@@ -88,6 +88,9 @@ $(window).on("load", function (){
 $(".loadp").fadeOut("slow");
 				});
 
+window.onhashchange = function() { 
+				
+};
 
 				
 
